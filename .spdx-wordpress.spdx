@@ -1,0 +1,70 @@
+{
+    "SPDXID": "SPDXRef-wordpress",
+    "spdxVersion": "SPDX-2.3",
+    "creationInfo": {
+        "created": "2025-03-06T10:01:08.041Z",
+        "creators": [
+            "Organization: Broadcom Inc. and/or its subsidiaries."
+        ]
+    },
+    "name": "SPDX document for WordPress 6.7.2",
+    "dataLicense": "CC0-1.0",
+    "documentDescribes": [
+        "SPDXRef-wordpress"
+    ],
+    "documentNamespace": "wordpress-6.7.2",
+    "packages": [
+        {
+            "SPDXID": "SPDXRef-wordpress",
+            "name": "wordpress",
+            "versionInfo": "6.7.2-7",
+            "downloadLocation": "https://wordpress.org/wordpress-6.7.2.tar.gz",
+            "licenseConcluded": "GPL-2.0-only",
+            "licenseDeclared": "GPL-2.0-only",
+            "filesAnalyzed": false,
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceType": "cpe23Type",
+                    "referenceLocator": "cpe:2.3:*:wordpress:wordpress:6.7.2:*:*:*:*:*:*:*"
+                },
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:bitnami/wordpress@6.7.2-7?arch=amd64&distro=debian-12"
+                }
+            ],
+            "copyrightText": "NOASSERTION"
+        },
+        {
+            "SPDXID": "SPDXRef-wp-cli",
+            "name": "wp-cli",
+            "versionInfo": "2.11.0",
+            "downloadLocation": "https://github.com/wp-cli/wp-cli/archive/v2.11.0.tar.gz",
+            "licenseConcluded": "MIT",
+            "licenseDeclared": "MIT",
+            "filesAnalyzed": false,
+            "externalRefs": [
+                {
+                    "referenceCategory": "SECURITY",
+                    "referenceType": "cpe23Type",
+                    "referenceLocator": "cpe:2.3:*:wp-cli:wp-cli:2.11.0:*:*:*:*:*:*:*"
+                },
+                {
+                    "referenceCategory": "PACKAGE-MANAGER",
+                    "referenceType": "purl",
+                    "referenceLocator": "pkg:bitnami/wp-cli@2.11.0?arch=amd64&distro=debian-12"
+                }
+            ],
+            "copyrightText": "NOASSERTION"
+        }
+    ],
+    "files": [],
+    "relationships": [
+        {
+            "spdxElementId": "SPDXRef-wordpress",
+            "relationshipType": "CONTAINS",
+            "relatedSpdxElement": "SPDXRef-wp-cli"
+        }
+    ]
+}

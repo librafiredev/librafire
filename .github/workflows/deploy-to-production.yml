@@ -1,0 +1,145 @@
+name: Deploy to production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual triggering from GitHub UI
+
+jobs:
+  deploy:
+    name: Deploy to production Server
+    runs-on: ubuntu-latest
+    env:
+      THEME_NAME: librafire-theme
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to production server via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.STAGING_SSH_HOST }}
+          username: bitnami
+          key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            WP_DIR="/opt/bitnami/wordpress"
+            LOG_FILE="/home/bitnami/deploy-staging.log"
+            
+            echo "========================================" | tee -a "$LOG_FILE"
+            echo "Deployment started at $(date)" | tee -a "$LOG_FILE"
+            echo "========================================" | tee -a "$LOG_FILE"
+            
+            # Navigate to WordPress directory
+            cd "$WP_DIR"
+            
+            # Stash any local changes (shouldn't be any, but just in case)
+            echo "Checking for local changes..." | tee -a "$LOG_FILE"
+            if ! git diff-index --quiet HEAD --; then
+                echo "Local changes detected, stashing..." | tee -a "$LOG_FILE"
+                git stash
+            fi
+            
+            # Fetch latest changes
+            echo "Fetching from origin..." | tee -a "$LOG_FILE"
+            git fetch origin 2>&1 | tee -a "$LOG_FILE"
+            
+            # Pull main branch
+            echo "Pulling main branch..." | tee -a "$LOG_FILE"
+            git pull origin main 2>&1 | tee -a "$LOG_FILE"
+            
+            # Check for merge conflicts
+            if grep -r "^<<<<<<< " "$WP_DIR" --include="*.php" --include="*.js" --include="*.css" > /dev/null 2>&1; then
+                echo "❌ ERROR: Git merge conflicts detected!" | tee -a "$LOG_FILE"
+                echo "Aborting deployment. Please resolve conflicts manually." | tee -a "$LOG_FILE"
+                git merge --abort 2>/dev/null || true
+                exit 1
+            fi
+            echo "✓ No merge conflicts detected" | tee -a "$LOG_FILE"
+            
+            # Fix permissions
+            echo "Fixing permissions..." | tee -a "$LOG_FILE"
+            sudo chown -R bitnami:daemon "$WP_DIR"
+            
+            # Restart services
+            echo "Restarting Apache and PHP-FPM..." | tee -a "$LOG_FILE"
+            sudo /opt/bitnami/ctlscript.sh restart apache
+            sudo /opt/bitnami/ctlscript.sh restart php-fpm
+            
+            echo "========================================" | tee -a "$LOG_FILE"
+            echo "Deployment completed at $(date)" | tee -a "$LOG_FILE"
+            echo "========================================" | tee -a "$LOG_FILE"
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build theme assets
+        run: |
+          cd wp-content/themes/${{ env.THEME_NAME }}
+          npm install
+          npm run production
+
+      - name: Deploy theme with rsync
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -avzr --delete --exclude='.git' --exclude='node_modules' --exclude='.gitignore'
+          path: wp-content/themes/${{ env.THEME_NAME }}/
+          remote_path: /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }}/
+          remote_host: ${{ secrets.STAGING_SSH_HOST }}
+          remote_user: bitnami
+          remote_key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
+          remote_port: 22
+
+      - name: Set permissions on theme directory
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.STAGING_SSH_HOST }}
+          username: bitnami
+          key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            # Set proper ownership and permissions for WordPress theme
+            sudo chown -R bitnami:daemon /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }}
+            sudo find /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }} -type d -exec chmod 775 {} \;
+            sudo find /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }} -type f -exec chmod 775 {} \;
+            
+            # Make sure PHP files are executable by the web server
+            sudo find /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }} -name "*.php" -exec chmod 775 {} \;
+            
+            # Ensure uploads are possible (set to 775/664)
+            sudo mkdir -p /opt/bitnami/wordpress/wp-content/uploads
+            sudo chown -R bitnami:daemon /opt/bitnami/wordpress/wp-content/uploads
+            sudo find /opt/bitnami/wordpress/wp-content/uploads -type d -exec chmod 775 {} \;
+            sudo find /opt/bitnami/wordpress/wp-content/uploads -type f -exec chmod 775 {} \;
+            
+            echo "Permissions set successfully"
+
+      - name: Verify deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.STAGING_SSH_HOST }}
+          username: bitnami
+          key: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
+          port: 22
+          envs: THEME_NAME
+          script: |
+            if [ -f "/opt/bitnami/wordpress/wp-content/themes/$THEME_NAME/style.css" ]; then
+              echo "✅ Theme deployed successfully"
+              ls -la /opt/bitnami/wordpress/wp-content/themes/$THEME_NAME/ | head -10
+            else
+              echo "❌ Theme deployment failed"
+              exit 1
+            fi
+
+      - name: Notify deployment status
+        if: always()
+        run: |
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "✅ Staging deployment completed successfully"
+          else
+            echo "❌ Staging deployment failed"
+          fi
