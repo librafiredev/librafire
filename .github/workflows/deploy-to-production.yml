@@ -120,6 +120,19 @@ jobs:
             sudo find /opt/bitnami/wordpress/wp-content/uploads -type d -exec chmod 755 {} \;
             sudo find /opt/bitnami/wordpress/wp-content/uploads -type f -exec chmod 644 {} \;
             
+            
+            # Ensure WP Rocket cache directories have proper permissions
+            sudo mkdir -p /opt/bitnami/wordpress/wp-content/cache/background-css
+            sudo mkdir -p /opt/bitnami/wordpress/wp-content/cache/used-css
+            sudo mkdir -p /opt/bitnami/wordpress/wp-content/cache/wp-rocket
+            sudo mkdir -p /opt/bitnami/wordpress/wp-content/cache/min
+            sudo mkdir -p /opt/bitnami/wordpress/wp-content/cache/busting
+            sudo mkdir -p /opt/bitnami/wordpress/wp-content/wp-rocket-config
+            sudo chown -R bitnami:daemon /opt/bitnami/wordpress/wp-content/cache
+            sudo chown -R bitnami:daemon /opt/bitnami/wordpress/wp-content/wp-rocket-config
+            sudo find /opt/bitnami/wordpress/wp-content/cache -type d -exec chmod 775 {} \;
+            sudo find /opt/bitnami/wordpress/wp-content/cache -type f -exec chmod 664 {} \;
+            sudo chmod 775 /opt/bitnami/wordpress/wp-content/wp-rocket-config
             echo "Permissions set successfully"
 
       - name: Verify deployment
