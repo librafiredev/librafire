@@ -17,6 +17,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build theme assets
+        run: |
+          cd wp-content/themes/${{ env.THEME_NAME }}
+          npm install
+          npm run production
+
       - name: Deploy to production server via SSH
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -72,17 +83,6 @@ jobs:
             echo "Deployment completed at $(date)" | tee -a "$LOG_FILE"
             echo "========================================" | tee -a "$LOG_FILE"
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Build theme assets
-        run: |
-          cd /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }}
-          npm install
-          npm run production
-
       - name: Deploy theme with rsync
         uses: burnett01/rsync-deployments@6.0.0
         with:

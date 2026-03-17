@@ -15,3 +15,7 @@ error_log
 ai1wm-backups/
 error-log-*
 wp-content/uploads/cache/wpml/
+
+# Ignore all themes except librafire-theme
+wp-content/themes/*
+!wp-content/themes/librafire-theme/
