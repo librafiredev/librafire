@@ -79,7 +79,7 @@ jobs:
 
       - name: Build theme assets
         run: |
-          cd wp-content/themes/${{ env.THEME_NAME }}
+          cd /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }}
           npm install
           npm run production
 
