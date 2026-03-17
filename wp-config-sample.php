@@ -1,4 +1,16 @@
 <?php
+define( 'WP_CACHE', true ); // Added by WP Rocket
+
+
+if (
+    (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') ||
+    (isset($_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO']) && $_SERVER['HTTP_CLOUDFRONT_FORWARDED_PROTO'] === 'https')
+) {
+    $_SERVER['HTTPS'] = 'on';
+}
+
+define('FORCE_SSL_ADMIN', true);
+
 /**
  * The base configuration for WordPress
  *
@@ -37,6 +49,12 @@ define( 'DB_CHARSET', 'utf8' );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
+/**
+ * Google API Keys
+ */
+define( 'GOOGLE_MAPS_API_KEY', 'your-google-maps-api-key-here' );
+define( 'GOOGLE_PAGESPEED_API_KEY', 'your-google-pagespeed-api-key-here' );
+
 /**#@+
  * Authentication unique keys and salts.
  *
@@ -48,14 +66,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'put your unique phrase here' );
-define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
-define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
-define( 'NONCE_KEY',        'put your unique phrase here' );
-define( 'AUTH_SALT',        'put your unique phrase here' );
-define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
-define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
-define( 'NONCE_SALT',       'put your unique phrase here' );
+define( 'PUT_UNIQUE_PHRASE_HERE', 'put your unique phrase here' );
+define( 'PUT_UNIQUE_PHRASE_HERE', 'put your unique phrase here' );
+define( 'PUT_UNIQUE_PHRASE_HERE', 'put your unique phrase here' );
+define( 'PUT_UNIQUE_PHRASE_HERE', 'put your unique phrase here' );
+define( 'PUT_UNIQUE_PHRASE_HERE', 'put your unique phrase here' );
+define( 'PUT_UNIQUE_PHRASE_HERE', 'put your unique phrase here' );
+define( 'PUT_UNIQUE_PHRASE_HERE', 'put your unique phrase here' );
+define( 'PUT_UNIQUE_PHRASE_HERE', 'put your unique phrase here' );
 
 /**#@-*/
 
@@ -91,6 +109,21 @@ define( 'WP_DEBUG', false );
 
 
 
+define( 'FS_METHOD', 'direct' );
+/**
+ * The WP_SITEURL and WP_HOME options are configured to access from any hostname or IP address.
+ * If you want to access only from an specific domain, you can modify them. For example:
+ *  define('WP_HOME','http://example.com');
+ *  define('WP_SITEURL','http://example.com');
+ *
+ */
+if ( defined( 'WP_CLI' ) ) {
+	$_SERVER['HTTP_HOST'] = '127.0.0.1';
+}
+
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+define( 'WP_AUTO_UPDATE_CORE', 'minor' );
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
@@ -100,3 +133,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+/**
+ * Disable pingback.ping xmlrpc method to prevent WordPress from participating in DDoS attacks
+ * More info at: https://docs.bitnami.com/general/apps/wordpress/troubleshooting/xmlrpc-and-pingback/
+ */
+if ( !defined( 'WP_CLI' ) ) {
+	// remove x-pingback HTTP header
+	add_filter("wp_headers", function($headers) {
+		unset($headers["X-Pingback"]);
+		return $headers;
+	});
+	// disable pingbacks
+	add_filter( "xmlrpc_methods", function( $methods ) {
+		unset( $methods["pingback.ping"] );
+		return $methods;
+	});
+}
