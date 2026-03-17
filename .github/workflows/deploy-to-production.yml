@@ -104,17 +104,21 @@ jobs:
           script: |
             # Set proper ownership and permissions for WordPress theme
             sudo chown -R bitnami:daemon /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }}
-            sudo find /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }} -type d -exec chmod 775 {} \;
-            sudo find /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }} -type f -exec chmod 775 {} \;
             
-            # Make sure PHP files are executable by the web server
-            sudo find /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }} -name "*.php" -exec chmod 775 {} \;
+            # Directories: 755 (rwxr-xr-x)
+            sudo find /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }} -type d -exec chmod 755 {} \;
             
-            # Ensure uploads are possible (set to 775/664)
+            # Files: 644 (rw-r--r--)
+            sudo find /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }} -type f -exec chmod 644 {} \;
+            
+            # PHP files: 644 (they don't need to be executable)
+            sudo find /opt/bitnami/wordpress/wp-content/themes/${{ env.THEME_NAME }} -name "*.php" -exec chmod 644 {} \;
+            
+            # Ensure uploads directory has proper permissions
             sudo mkdir -p /opt/bitnami/wordpress/wp-content/uploads
             sudo chown -R bitnami:daemon /opt/bitnami/wordpress/wp-content/uploads
-            sudo find /opt/bitnami/wordpress/wp-content/uploads -type d -exec chmod 775 {} \;
-            sudo find /opt/bitnami/wordpress/wp-content/uploads -type f -exec chmod 775 {} \;
+            sudo find /opt/bitnami/wordpress/wp-content/uploads -type d -exec chmod 755 {} \;
+            sudo find /opt/bitnami/wordpress/wp-content/uploads -type f -exec chmod 644 {} \;
             
             echo "Permissions set successfully"
 
