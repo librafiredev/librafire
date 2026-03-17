@@ -45,7 +45,7 @@
         </div>
     </div>
     <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0Q1kMCm0HxxB739wX4EjfmfE3FixtyR8"></script>
+            src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_MAPS_API_KEY; ?>"></script>
     <script type="text/javascript">
         var locations = [];
 		<?php

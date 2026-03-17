@@ -734,7 +734,7 @@
     "widget.latest.items": 3,
     "widget.latest_news.items": 5,
     "widget.pagespeed.enabled": "1",
-    "widget.pagespeed.key": "AIzaSyBQilzeY4HHSm9_2Gfml01G5D8shVjelAQ",
+    "widget.pagespeed.key": "YOUR_PAGESPEED_API_KEY_HERE",
     "widget.pagespeed.key.restrict.referrer": "",
     "widget.pagespeed.show_in_admin_bar": "1",
     "timelimit.email_send": 180,

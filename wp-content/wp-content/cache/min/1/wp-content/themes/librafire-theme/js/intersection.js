@@ -1,3 +1,0 @@
-function intersection(){const elements=document.querySelectorAll(".js-observe");const animate=(el)=>{el.classList.add("active")};if(!('IntersectionObserver' in window)){elements.forEach((el)=>{el.classList.add('active')});return}
-const myObserver=new IntersectionObserver((entries,observer)=>{entries.forEach((entry)=>{if(entry.isIntersecting){animate(entry.target);observer.unobserve(entry.target)}})},{rootMargin:"0px 0px -100px 0px",});elements.forEach((el)=>{myObserver.observe(el)})}
-intersection();setTimeout(()=>{const logoMenuWrapper=document.querySelector('.logo-menu-wrapper');logoMenuWrapper.classList.add('top-fixed')},500)

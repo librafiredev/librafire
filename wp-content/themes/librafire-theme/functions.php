@@ -569,7 +569,7 @@ function cd_meta_box_page( $post_id ) {
 // Add google map API ket for acf
 function custom_acf_init() {
 
-	acf_update_setting( 'google_api_key', 'AIzaSyA0Q1kMCm0HxxB739wX4EjfmfE3FixtyR8' );
+	acf_update_setting( 'google_api_key', GOOGLE_MAPS_API_KEY );
 }
 
 add_action( 'acf/init', 'custom_acf_init' );

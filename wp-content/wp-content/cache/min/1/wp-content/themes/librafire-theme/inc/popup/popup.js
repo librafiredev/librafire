@@ -1,2 +1,0 @@
-jQuery(document).ready(function($){$('.portfolio-item .portfolio-full').append('<div class="popup-mask"></div>');Boxgrid.init();function scroll_to_project(){if($(window).width()<768){$('#portfolio .portfolio-cat li').on('click',function(){$("html, body").animate({scrollTop:$('.portofolio-items').offset().top-300},300)})}}
-scroll_to_project()})
