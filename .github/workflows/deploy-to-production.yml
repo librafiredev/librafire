@@ -74,6 +74,15 @@ jobs:
             echo "Fixing permissions..." | tee -a "$LOG_FILE"
             sudo chown -R bitnami:daemon "$WP_DIR"
             
+            
+            # Set Apache umask for proper file permissions
+            echo "Setting Apache umask..." | tee -a "$LOG_FILE"
+            if ! grep -q "umask 0002" /opt/bitnami/apache/bin/envvars; then
+                echo "umask 0002" | sudo tee -a /opt/bitnami/apache/bin/envvars
+                echo "✓ Apache umask set to 0002" | tee -a "$LOG_FILE"
+            else
+                echo "✓ Apache umask already configured" | tee -a "$LOG_FILE"
+            fi
             # Restart services
             echo "Restarting Apache and PHP-FPM..." | tee -a "$LOG_FILE"
             sudo /opt/bitnami/ctlscript.sh restart apache
