@@ -1,0 +1,48 @@
+<h1>USO DE COOKIES</h1>
+<p>Las cookies son identificadores alfanuméricos que, a través de tu navegador de internet se transmiten a tu ordenador para que nuestro sistema pueda reconocer tu navegador y así ofrecerte mejores prestaciones de navegación, como productos recomendados o productos almacenados en tu cesta de una visita a otra.</p>
+
+<ol>
+<li>Podemos recabar información, con cookies propias y de terceros, sobre tu ordenador, incluido, en su caso, su dirección de IP, sistema operativo y tipo de navegador. Se trata de datos estadísticos sobre cómo navegas por nuestro sitio Web. Las cookies contienen información que se transfiere al disco duro de tu ordenador.</li>
+
+<li>Las cookies nos ayudan a mejorar nuestro sitio Web y a prestar un servicio mejor y más personalizado. En concreto, nos permiten:</li>
+
+<ul>
+<li>Hacer una estimación sobre números y patrones de uso.</li>
+<li>Almacenar información acerca de tus preferencias y personalizar nuestro sitio web de conformidad con tus intereses individuales.</li>
+<li>Acelerar tus búsquedas.</li>
+<li>Reconocerte cuando regreses de nuevo a nuestro sitio.</li>
+</ul>
+</ol>
+
+<p>Esta página web utiliza Google Analytics, un servicio analítico de web prestado por Google, Inc., una compañía de Delaware cuya oficina principal está en 1600 Amphitheatre Parkway, Mountain View (California), CA 94043, Estados Unidos ('Google'). Google Analytics utiliza 'cookies', que son archivos de texto ubicados en su ordenador, para ayudar al sitio Web a analizar el uso que hacen los usuarios del sitio Web. La información que genera la cookie acerca de su uso del sitio Web (incluyendo su dirección IP) será directamente transmitida y archivada por Google en los servidores de Estados Unidos. Google usará esta información por cuenta nuestra con el propósito de seguir la pista de su uso del sitio Web, recopilando informes de la actividad del sitio Web y prestando otros servicios relacionados con la actividad del sitio Web y el uso de Internet. Google podrá transmitir dicha información a terceros cuando así se lo requiera la legislación, o cuando dichos terceros procesen la información por cuenta de Google. Google no asociará su dirección IP con ningún otro dato del que disponga Google. Puede Usted rechazar el tratamiento de los datos o la información rechazando el uso de cookies mediante la selección de la configuración apropiada de su navegador, sin embargo, debe Usted saber que si lo hace puede ser que no pueda usar la plena funcionabilidad de este sitio Web. Al utilizar este sitio Web Usted consiente el tratamiento de información acerca de Usted por Google en la forma y para los fines arriba indicados.</p>
+
+<p>A estos efectos, se informa que Google Inc. tiene la consideración de 'puerto seguro' en cuanto a la normativa de protección de datos personales.</p>
+
+<p>El Usuario da su previo consentimiento, salvo indicación en contrario, al uso de 'cookies'. El Usuario autoriza también los seguimientos de su IP durante la navegación en el sitio Web.</p>
+
+<p>Puedes negarte a aceptar cookies activando la configuración en tu navegador que permite rechazar las cookies. No obstante, si seleccionas esta configuración, quizás no puedas acceder a determinadas partes del Sitio Web o no puedas aprovecharte de alguno de nuestros servicios. A menos que hayas ajustado la configuración de tu navegador de forma que rechace cookies, nuestro sistema producirá cookies cuando te conectes a nuestro sitio.</p>
+
+<h3>¿Qué tipos de cookies existen?</h3>
+<ul>
+<li>Cookies propias: Son aquellas que enviamos a tu ordenador o terminal desde nuestra página web.</li>
+<li>Cookies de tercero: Son aquéllas que se envían a tu ordenador o terminal desde un dominio o una página web que no es gestionada por nosotros, sino por otra entidad que trata los datos obtenidos través de las cookies.</li>
+<li>Cookies de sesión: Son un tipo de cookies diseñadas para recabar y almacenar datos mientras accedes a nuestra web.</li>
+<li>Cookies persistentes: Son un tipo de cookies en el que los datos siguen almacenados en el terminal y pueden ser accedidos y tratados durante un periodo determinado de tiempo, y que puede ir de unos minutos a varios años.</li>
+<li>Cookies de análisis: Son aquéllas que bien tratadas por nosotros o por terceros, nos permiten cuantificar el número de usuarios y realizar la medición y análisis estadístico de la utilización que hacen los usuarios de nuestra web. Para ello analizamos la navegación en nuestra página web con el fin de mejorar la oferta de productos o servicios que ofrecemos.</li>
+<li>Cookies publicitarias: Son aquéllas que permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que hay en nuestra página web en base a criterios como el contenido editado o la frecuencia en la que se muestran los anuncios o en función del comportamiento de los usuarios obtenida a través de la observación continuada de sus hábitos de navegación, lo que permite desarrollar un perfil específico para mostrar la publicidad en función del mismo.</li>
+<ul>
+
+<h3>¿Cómo puedo desactivar las cookies?</h3>
+
+<p>La mayoría de los navegadores indican cómo configurar su navegador para que no acepte cookies, para que le notifique cada vez que reciba una nueva cookie, así como para desactivarlas completamente. Para controlar qué uso quiere que se haga de su información, puede configurar el navegador de su terminal en la forma que estime más conveniente para Vd.</p>
+
+<p>En todo caso, le hacemos notar que si se desactivan las cookies técnicas y/o de funcionamiento, la calidad de la página web puede disminuir o puede que cueste más identificarle.</p>
+
+<p>Le indicamos los siguientes enlaces, donde podrá encontrar más información sobre los diferentes navegadores:</p>
+
+<ul>
+<li><a href="http://windows.microsoft.com/es-es/windows7/how-to-manage-cookies-in-internet-explorer-9">Explorer</a></li>
+<li><a href="http://support.google.com/chrome/bin/answer.py?hl=es&answer=95647">Chrome</a></li>
+<li><a href="http://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we">Firefox</a></li>
+<li><a href="http://www.opera.com/help/tutorials/security/cookies/">Opera</a></li>
+</ul>

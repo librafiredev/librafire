@@ -1,0 +1,244 @@
+#easy-cookies-policy-main-wrapper {
+	display: block;
+	position: relative;
+	width: 100%;
+	z-index: 900000;
+	padding: 8px;
+}
+
+.easy-cookies-policy-content {
+	margin: 0px auto;
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: normal;
+	text-align: center;
+	text-shadow: none;
+}
+
+.easy-cookies-policy-position-top {
+	top: 0px;
+}
+
+.easy-cookies-policy-position-bottom {
+	bottom: 0px;
+}
+
+.easy-cookies-policy-display-fixed {
+	position: fixed !important;
+}
+
+.easy-cookies-policy-display-onpage {
+	position: relative !important;
+}
+
+.easy-cookies-policy-close-close .easy-cookies-policy-close {
+	display: block;
+}
+
+.easy-cookies-policy-close-close .easy-cookies-policy-accept {
+	display: none;
+}
+
+.easy-cookies-policy-close-accept .easy-cookies-policy-close {
+	display: none;
+}
+
+.easy-cookies-policy-close-accept .easy-cookies-policy-accept {
+	display: inline-block;
+}
+
+.easy-cookies-policy-close-auto .easy-cookies-policy-close {
+	display: none;
+}
+
+.easy-cookies-policy-close-auto .easy-cookies-policy-accept {
+	display: none;
+}
+
+.easy-cookies-policy-close {
+	display: none;
+	float: right;
+	margin-left: 10px;
+	cursor: pointer;
+	font-weight: 800;
+	font-size: 18px;
+	padding: 1px;
+	border-radius: 5px;
+}
+
+.easy-cookies-policy-close:hover {
+	border-top: 1px solid #bbbbbb;
+	border-right: 1px solid #bbbbbb;
+	border-bottom: 1px solid #555555;
+	border-left: 1px solid #555555;
+}
+
+.easy-cookies-policy-close:active {
+	border-bottom: 1px solid #bbbbbb;
+	border-left: 1px solid #bbbbbb;
+	border-top: 1px solid #555555;
+	border-right: 1px solid #555555;
+}
+
+.easy-cookies-policy-accept {
+	margin: 0 auto;
+	border-radius: 5px;
+	border: 1px solid black;
+	padding: 3px 15px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.easy-cookies-policy-accept:active {
+	padding: 3px 15px;
+}
+
+/********************
+* COLOR THEMES
+*********************/
+
+.easy-cookies-policy-content a {
+	text-decoration: underline;
+}
+
+/* BLACK */
+.easy-cookies-policy-theme-black {
+	background-color: #000000;
+	color: #bbbbbb;
+}
+
+.easy-cookies-policy-theme-black .easy-cookies-policy-accept {
+	background-color: #4976C7;
+	color: #ffffff;
+	border-color: #7699d7 #7699d7 #1e3663 #1e3663;
+}
+
+.easy-cookies-policy-theme-black .easy-cookies-policy-accept:hover {
+	background-color: #2a62c5;
+}
+
+.easy-cookies-policy-theme-black .easy-cookies-policy-accept:active {
+	border-color: #1e3663 #1e3663 #7699d7 #7699d7;
+}
+
+.easy-cookies-policy-theme-black .easy-cookies-policy-close {
+	color: #ffffff;
+}
+
+.easy-cookies-policy-theme-black a {
+	color: #eeeeee;
+}
+
+/* WHITE */
+.easy-cookies-policy-theme-white {
+	background-color: #ffffff;
+	color: #222222;
+}
+
+.easy-cookies-policy-theme-white .easy-cookies-policy-accept {
+	background-color: #4976C7;
+	color: #ffffff;
+	border-color: #7699d7 #7699d7 #1e3663 #1e3663;
+}
+
+.easy-cookies-policy-theme-white .easy-cookies-policy-accept:hover {
+	background-color: #2a62c5;
+}
+
+.easy-cookies-policy-theme-white .easy-cookies-policy-accept:active {
+	border-color: #1e3663 #1e3663 #7699d7 #7699d7;
+}
+
+.easy-cookies-policy-theme-white .easy-cookies-policy-close {
+	color: #000000;
+}
+
+.easy-cookies-policy-theme-white a {
+	color: #2f7d44;
+}
+
+/* BLUE */
+.easy-cookies-policy-theme-blue {
+	background-color: #5492e0;
+	color: #222222;
+}
+
+.easy-cookies-policy-theme-blue .easy-cookies-policy-accept {
+	background-color: #4976C7;
+	color: #ffffff;
+	border-color: #7699d7 #7699d7 #1e3663 #1e3663;
+}
+
+.easy-cookies-policy-theme-blue .easy-cookies-policy-accept:hover {
+	background-color: #2a62c5;
+}
+
+.easy-cookies-policy-theme-blue .easy-cookies-policy-accept:active {
+	border-color: #1e3663 #1e3663 #7699d7 #7699d7;
+}
+
+.easy-cookies-policy-theme-blue .easy-cookies-policy-close {
+	color: #000000;
+}
+
+.easy-cookies-policy-theme-blue a {
+	color: #055f1c;
+}
+
+/* GREEN */
+.easy-cookies-policy-theme-green {
+	background-color: #0b7000;
+	color: #222222;
+}
+
+.easy-cookies-policy-theme-green .easy-cookies-policy-accept {
+	background-color: #4976C7;
+	color: #ffffff;
+	border-color: #7699d7 #7699d7 #1e3663 #1e3663;
+}
+
+.easy-cookies-policy-theme-green .easy-cookies-policy-accept:hover {
+	background-color: #2a62c5;
+}
+
+.easy-cookies-policy-theme-green .easy-cookies-policy-accept:active {
+	border-color: #1e3663 #1e3663 #7699d7 #7699d7;
+}
+
+.easy-cookies-policy-theme-green .easy-cookies-policy-close {
+	color: #000000;
+}
+
+.easy-cookies-policy-theme-green a {
+	color: #1641bd;
+}
+
+/* RED */
+.easy-cookies-policy-theme-red {
+	background-color: #e04729;
+	color: #222222;
+}
+
+.easy-cookies-policy-theme-red .easy-cookies-policy-accept {
+	background-color: #4976C7;
+	color: #ffffff;
+	border-color: #7699d7 #7699d7 #1e3663 #1e3663;
+}
+
+.easy-cookies-policy-theme-red .easy-cookies-policy-accept:hover {
+	background-color: #2a62c5;
+}
+
+.easy-cookies-policy-theme-red .easy-cookies-policy-accept:active {
+	border-color: #1e3663 #1e3663 #7699d7 #7699d7;
+}
+
+.easy-cookies-policy-theme-red .easy-cookies-policy-close {
+	color: #000000;
+}
+
+.easy-cookies-policy-theme-red a {
+	color: #1641bd;
+}

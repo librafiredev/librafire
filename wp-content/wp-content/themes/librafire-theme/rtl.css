@@ -1,0 +1,12 @@
+/*Theme Name: Professione Acqua
+Theme URI: https://www.professioneacqua.it/
+Author: LibraFireAuthor
+URI: http://www.librafire.com/
+Description: Custom theme made for Professione Acqua
+Version: 1.0.0
+License: GNU General Public License v2 or laterLicense
+URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: acquaTags:*/
+.information-box .sidebar-cats {
+    width: 100%;
+}

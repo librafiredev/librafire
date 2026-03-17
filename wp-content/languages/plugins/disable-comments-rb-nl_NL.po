@@ -1,0 +1,101 @@
+# Translation of Plugins - Disable Comments - Stable (latest release) in Dutch
+# This file is distributed under the same license as the Plugins - Disable Comments - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-11-06 10:49:28+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: nl\n"
+"Project-Id-Version: Plugins - Disable Comments - Stable (latest release)\n"
+
+#: information.php:195
+msgid "Install Rb Forms"
+msgstr "Rb Forms installeren"
+
+#: information.php:176
+msgid "RB Forms - absolutely FREE contact form plugin for WordPress"
+msgstr "RB Forms - Absoluut GRATIS contactformulier plugin voor WordPress"
+
+#: information.php:232
+msgid "Install Disable Right Click"
+msgstr "Installeren uitschakelen rechtermuisknop"
+
+#: information.php:226
+msgid "Simple plugin that allows you to disable right click option easily"
+msgstr "Eenvoudige plugin waarmee je de rechts klik optie eenvoudig kunt uitschakelen"
+
+#: information.php:216
+msgid "Install Duplicate Post"
+msgstr "Duplicaat bericht installeren"
+
+#: information.php:210
+msgid "Simple plugin that allows you to duplicate post easily"
+msgstr "Eenvoudige plugin waarmee je berichten gemakkelijk kunt dupliceren"
+
+#: information.php:262
+msgid "Register Free Account"
+msgstr "Gratis account registreren"
+
+#: information.php:258
+msgid "Free website uptime and performance monitoring service for your WordPress"
+msgstr "Gratis site uptime en prestatie monitoring dienst voor je WordPress"
+
+#: information.php:248
+msgid "Install Gallery"
+msgstr "Galerij installeren"
+
+#: information.php:242
+msgid "Create Free Gallery with Premium features with Robo Gallery"
+msgstr "Maak gratis galerij met Premium functies met Robo Gallery"
+
+#: options.php:55
+msgid "Enable all Comments (comments on entire site will be turned on)"
+msgstr "Alle reacties inschakelen (reacties op de hele site worden ingeschakeld)"
+
+#: options.php:39
+msgid "Here you can configure your disabled comments tools. Section with all configuration settings of this tool."
+msgstr "Hier kun je je uitgeschakelde gereedschap voor reacties configureren. Sectie met alle instellingen voor de configuratie van dit gereedschap."
+
+#. Author of the plugin
+#: disable-comments-rb.php
+msgid "rbPlugins"
+msgstr "rbPlugins"
+
+#. Description of the plugin
+#: disable-comments-rb.php
+msgid "Easy tool to disable comments for your blog posts, pages. Admin can disable comments in just few clicks. Delete comments from blog post."
+msgstr "Eenvoudig gereedschap om reacties uit te schakelen voor je blog berichten, pagina's. Beheerders kunnen reacties uitschakelen met slechts een paar klikken. Verwijder reacties uit berichten op je blog."
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: disable-comments-rb.php
+msgid "https://robosoft.co/wordpress-plugins/disable-comments"
+msgstr "https://robosoft.co/wordpress-plugins/disable-comments"
+
+#: options.php:62
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
+#: options.php:47
+msgid "Disable all comments"
+msgstr "Alle reacties uitschakelen"
+
+#. Plugin Name of the plugin
+#: disable-comments-rb.php classDisableComments.php:239 options.php:37
+msgid "Disable Comments RB"
+msgstr "Disable Comments RB"
+
+#: classDisableComments.php:216
+msgid "Settings"
+msgstr "Instellingen"
+
+#: classDisableComments.php:155
+msgid "The <em>Disable Comments</em> plugin is active, but isn't configured to do anything yet. Visit the <a href=\"%s\">configuration page</a> to choose which post types to disable comments on."
+msgstr "De plugin <em>Disable Comments</em> is actief, maar is nog niet geconfigureerd om iets te doen. Bezoek de <a href=\"%s\">configuratiepagina</a> om te kiezen op welke berichttypen je reacties wilt uitschakelen."
+
+#: classDisableComments.php:129 classDisableComments.php:164
+msgid "Comments are closed."
+msgstr "Reacties zijn gesloten."

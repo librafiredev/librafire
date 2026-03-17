@@ -1,0 +1,310 @@
+.easy-cookies-policy-admin {
+	width: 100%;
+	max-width: 960px;
+	margin-top: 25px;
+}
+.easy-cookies-policy-admin h1 {
+	font-size:22px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #666666;
+}
+
+.easy-cookies-policy-admin .easy-cookies-policy-info {
+	float: right;
+	background-color: #d4dce5;
+	border: 1px solid #4976c7;
+	border-radius: 6px;
+	width: 230px;
+	padding: 9px;
+}
+
+.easy-cookies-policy-admin .easy-cookies-policy-messages {
+	display: none;
+	background-color: #d2ffc9;
+	padding: 20px;
+	border: 1px solid #bbbbbb;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.easy-cookies-policy-admin .easy-cookies-policy-messages.error {
+	background-color: #fffccb;
+	border:1px solid #e4db57;
+}
+
+.easy-cookies-policy-grid {
+	padding: 10px 0;
+}
+.easy-cookies-policy-grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.easy-cookies-policy-label, .easy-cookies-policy-input {
+	float:left;
+	padding: 0 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.easy-cookies-policy-label {
+	width: 220px;
+}
+.easy-cookies-policy-input {
+	width: 460px;
+}
+.easy-cookies-policy-admin .easy-cookies-policy-box {
+	width: 100%;
+	max-width: 960px;
+	display: inline-block;
+	background-color: #efefef;
+	padding: 10px;
+	margin: 0;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.easy-cookies-policy-admin form label {
+	display: inline-block;
+	padding: 10px;
+	margin:0;
+	font-family: "Arial";
+	font-size:12px;
+	vertical-align: bottom;
+	cursor: default;
+}
+.easy-cookies-policy-admin form label.padv0 {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.easy-cookies-policy-admin form textarea,
+.easy-cookies-policy-admin form select,
+.easy-cookies-policy-admin form input {
+	width: 100%;
+	display: inline-block;
+	padding: 6px;
+	margin:0;
+	color: #666666;
+	background-color: #fff;
+	font-family: "Arial";
+	font-size:12px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.easy-cookies-policy-admin form .easy-cookies-policy-radio {
+	cursor: pointer;
+	width: 100%;
+	display: block;
+	padding: 10px;
+	margin:0 0 10px 0;
+	color: #666666;
+	background-color: #e5e5e5;
+	font-family: "Arial";
+	font-size:12px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;	
+}
+.easy-cookies-policy-admin form .easy-cookies-policy-radio input {
+	margin-right: 5px;
+}
+.easy-cookies-policy-admin input[type='range'] {
+	width: 300px;
+}
+
+.easy-cookies-policy-admin form hr {
+	padding: 0;
+	margin: 0;
+	height: 1px;
+	border: 0;
+	border-bottom: 1px solid #cccccc;
+}
+.easy-cookies-policy-admin div.easy-cookies-policy-button {
+	cursor: pointer;
+	display: block;
+	width: auto;
+	max-width: 300px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-decoration: none;
+	padding: 0 10px;
+	margin: 0 auto;
+	color: #ffffff;
+	text-shadow: 1px 1px 1px #222222; 
+	font-family: "Arial";
+	font-size:14px;
+	line-height: 36px;
+	text-align: center;
+	outline: none;
+	background-image: -moz-linear-gradient(bottom, #4a7bd9, #60ade8); 
+	background-image: -ms-linear-gradient(bottom, #4a7bd9, #60ade8); 
+	background-image: -o-linear-gradient(bottom, #4a7bd9, #60ade8); 
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#4a7bd9), to(#60ade8)); 
+	background-image: -webkit-linear-gradient(bottom, #4a7bd9, #60ade8); 
+	background-image: linear-gradient(bottom, #4a7bd9, #60ade8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr="#4a7bd9", endColorStr="#60ade8"); 
+}
+.easy-cookies-policy-admin div.easy-cookies-policy-button:hover {
+    background-image: none;
+    filter:none;
+    background-color: #60ade8;
+}
+
+#easy-cookies-policy-cookies-policy {
+	border: 1px solid #60ade8;
+	padding: 9px;
+	border-radius: 5px;
+	background-color: #e5f6ff;
+}
+
+.easy-cookies-policy-background .ecp-bg-radio {
+	width: 50px;
+	height: 50px;
+	margin: 0 5px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	padding: 2px;
+}
+.easy-cookies-policy-background .ecp-bg-radio div {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+.easy-cookies-policy-background input {
+	margin-top: 15px;
+}
+
+.easy-cookies-policy-background .ecp-bg-black {
+	background-color: #000000;
+}
+
+.easy-cookies-policy-background .ecp-bg-white {
+	background-color: #ffffff;
+}
+
+.easy-cookies-policy-background .ecp-bg-blue {
+	background-color: #5492e0;
+}
+
+.easy-cookies-policy-background .ecp-bg-green {
+	background-color: #0b7000;
+}
+
+.easy-cookies-policy-background .ecp-bg-red {
+	background-color: #e04729;
+}
+.easy-cookies-policy-admin .easy-cookies-policy-background input[type="radio"] {
+	visibility: hidden;
+	position: absolute;
+	width: 10px;
+}
+.easy-cookies-policy-admin .easy-cookies-policy-background input[type="radio"]:checked + label {
+	border: 2px solid #3079be;
+	border-radius: 10px;
+}
+
+#easy-cookies-policy-transparency label {
+	color: #2196F3;
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.easy-cookies-policy-admin .switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	margin-left: 6px;
+}
+
+.easy-cookies-policy-admin .switch input {
+	visibility: hidden;
+	position: absolute;
+	width: 10px;
+}
+
+.easy-cookies-policy-admin .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #bb2d11;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.easy-cookies-policy-admin .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.easy-cookies-policy-admin input:checked + .slider {
+	background-color: #2bda47;
+}
+
+.easy-cookies-policy-admin input:focus + .slider {
+	box-shadow: 0 0 1px #2bda47;
+}
+
+.easy-cookies-policy-admin input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 20px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/***********************
+* PREVIEW STYLE MODIFICATIONS
+************************/
+
+.easy-cookies-policy-admin #easy-cookies-policy-main-wrapper {
+	width: auto;
+}

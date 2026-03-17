@@ -1,0 +1,89 @@
+@mixin clearfix() {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -moz-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transform-transition($transform) {
+  transition: ($transform);
+  -webkit-transition: ($transform);
+  -moz-transition: ($transform);
+  -o-transition: ($transform);
+}
+
+@mixin transform-rotate($rotate-value) {
+  -ms-transform: rotate($rotate-value);
+  -webkit-transform: rotate($rotate-value);
+  transform: rotate($rotate-value);
+}
+
+@mixin transform-rotateY($rotate-value) {
+  -ms-transform: rotateY($rotate-value);
+  -webkit-transform: rotateY($rotate-value);
+  transform: rotateY($rotate-value);
+}
+
+@mixin transform-rotateX($rotate-value) {
+  -ms-transform: rotateX($rotate-value);
+  -webkit-transform: rotateX($rotate-value);
+  transform: rotateX($rotate-value);
+}
+
+@mixin transform-skewY($deg) {
+  -ms-transform: skewY($deg);
+  -webkit-transform: skewY($deg);
+  transform: skewY($deg);
+}
+
+@mixin transform-skewX($deg) {
+  -ms-transform: skewX($deg);
+  -webkit-transform: skewX($deg);
+  transform: skewX($deg);
+}
+
+@mixin transform-scale($scale1, $scale2) {
+  -webkit-transform: scale($scale1, $scale2);
+  -moz-transform: scale($scale1, $scale2);
+  -ms-transform: scale($scale1, $scale2);
+  -o-transform: scale($scale1, $scale2);
+  transform: scale($scale1, $scale2);
+}
+
+@mixin transform-translate($translate-values-horizontal,$translate-values-vertical) {
+  -ms-transform: translate($translate-values-horizontal, $translate-values-vertical);
+  -webkit-transform: translate($translate-values-horizontal, $translate-values-vertical);
+  transform: translate($translate-values-horizontal, $translate-values-vertical);
+}
+
+@mixin drop-shadow($property) {
+  -ms-filter: drop-shadow($property);
+  filter: drop-shadow($property);
+  -webkit-filter: drop-shadow($property);
+}
+
+@mixin transform-style($value) {
+  -webkit-transform-style: $value;
+  -moz-transform-style: $value;
+  -o-transform-style: $value;
+  transform-style: $value;
+}
+
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+  -moz-backface-visibility: $value;
+  -o-backface-visibility: $value;
+  backface-visibility: $value;
+}

@@ -1,0 +1,187 @@
+# Easy Cookies Policy
+# Copyright (C) 2017 IZSoft
+# This file is distributed under the same license as the easy-cookies-policy package.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-15 13:45+0100\n"
+"PO-Revision-Date: 2017-03-15 17:45+0100\n"
+"Last-Translator: psanchez\n"
+"Language-Team: IZSoft\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin.php:39
+msgid "Settings"
+msgstr ""
+
+#: admin.php:47
+msgid "Support"
+msgstr ""
+
+#: admin.php:78
+msgid "here"
+msgstr ""
+
+#: admin.php:79
+msgid ""
+"A Cookies Policy Page with legal information text already exists. Check it "
+"out on your pages section under 'Cookies Policy' titled page."
+msgstr ""
+
+#: admin.php:80
+msgid ""
+"You might add a link to the cookies policy page within your warning text by "
+"adding a href tag like this: Read our cookies policy"
+msgstr ""
+
+#: admin.php:82
+msgid ""
+"You might add a link to the cookies policy page within your warning text. "
+"Create automaticaly your cookies policy page by clicking the button below"
+msgstr ""
+
+#: admin.php:96
+msgid "Could not retrieve page from trash"
+msgstr ""
+
+#: admin.php:100
+msgid "Page recovered from trash"
+msgstr ""
+
+#: admin.php:106
+msgid "Page already exists"
+msgstr ""
+
+#: admin.php:115
+msgid "Unable to load page content from file"
+msgstr ""
+
+#: admin.php:125
+msgid "Page creation failed"
+msgstr ""
+
+#: admin.php:130
+msgid "Page successfuly created"
+msgstr ""
+
+#: admin.php:145
+msgid "You must introduce a warning text"
+msgstr ""
+
+#: admin.php:169
+msgid "You must set a text for the accept button"
+msgstr ""
+
+#: admin.php:182
+msgid "Expiration time must be numeric value"
+msgstr ""
+
+#: admin.php:190
+msgid "Configuration data updated"
+msgstr ""
+
+#: configure_form.php:10
+msgid "Layout preview"
+msgstr ""
+
+#: configure_form.php:16
+msgid "Main text"
+msgstr ""
+
+#: configure_form.php:18
+msgid "Set default text"
+msgstr ""
+
+#: configure_form.php:26
+msgid "Color theme"
+msgstr ""
+
+#: configure_form.php:43
+msgid "Background transparency"
+msgstr ""
+
+#: configure_form.php:52
+msgid "Warning text color"
+msgstr ""
+
+#: configure_form.php:61
+msgid "Closing behavior"
+msgstr ""
+
+#: configure_form.php:65
+msgid "Automatic (on next page load)"
+msgstr ""
+
+#: configure_form.php:66
+msgid "On Accept button click"
+msgstr ""
+
+#: configure_form.php:67
+msgid "On Close button click"
+msgstr ""
+
+#: configure_form.php:73
+msgid "Warning accept button"
+msgstr ""
+
+#: configure_form.php:81
+msgid "Warning box display"
+msgstr ""
+
+#: configure_form.php:85
+msgid "Fixed (always visible)"
+msgstr ""
+
+#: configure_form.php:86
+msgid "On page content"
+msgstr ""
+
+#: configure_form.php:92
+msgid "Warning box position"
+msgstr ""
+
+#: configure_form.php:96
+msgid "Top"
+msgstr ""
+
+#: configure_form.php:97
+msgid "Bottom"
+msgstr ""
+
+#: configure_form.php:103
+msgid "Warning expiration (days)"
+msgstr ""
+
+#: configure_form.php:113
+msgid "Create cookies policy page"
+msgstr ""
+
+#: configure_form.php:117
+msgid "Enable/disable cookies warning"
+msgstr ""
+
+#: configure_form.php:130
+msgid "Save settings"
+msgstr ""
+
+#: configure_form.php:131
+msgid "Save settings & try out"
+msgstr ""
+
+#: easy-cookies-policy.php:89
+msgid "Accept"
+msgstr ""
+
+#: easy-cookies-policy.php:143
+msgid "Cookies warning not expired"
+msgstr ""
+
+#: easy-cookies-policy.php:150
+msgid "Cookies warning not enabled"
+msgstr ""
