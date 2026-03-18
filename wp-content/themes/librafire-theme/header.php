@@ -110,6 +110,27 @@
   }]
 }
 </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What technologies does LibraFire use?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We specialize in WordPress, Laravel, HTML5, CSS3, SCSS, JavaScript, PHP, jQuery, Drupal, and Adobe Creative Suite."
+    }
+  }, {
+    "@type": "Question",
+    "name": "How can I get a quote?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Visit our Get‑a‑Quote page or contact us directly via the form."
+    }
+  }]
+}
+</script>
 
     <style>
         body {
